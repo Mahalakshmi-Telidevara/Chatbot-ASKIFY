@@ -1,0 +1,677 @@
+/* General Body Styling */
+body {
+  font-family: 'Arial', sans-serif;
+  background: rgba(255, 255, 255, 0.2);
+  background-size: cover; /* Makes sure the background image covers the entire screen */
+  background-position: center; /* Ensures the image is centered */
+  margin: 0;
+  padding: 0;
+  color: #0a0a0a;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #1f2937;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar .logo {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+text-decoration: none;
+  color: #fff;
+  padding: 5px 20px;
+  font-weight: 500;
+  border-radius: 30px; /* Adds rounded corners */
+  transition: background-color 0.3s ease; /* Smooth transition effect */
+}
+.logo {
+  display: flex;
+  align-items: center;
+}
+.logo img {
+  width: 40px; /* Adjust the logo size as needed */
+  margin-right: 12px;
+  border-radius: 50%; /* Makes the logo circular */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds a shadow effect */
+}
+.logo span {
+  font-size: 24px;
+  font-weight: bold;
+  color: #fff;
+}
+.nav-link{
+ background-color: rgba(255, 255, 255, 0.2); /* Semi-transparent white */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Adds a shadow effect on hover */
+}
+
+.nav-links {
+  display: flex;
+}
+
+.nav-links li {
+  margin-left: 20px;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #fff;
+  padding: 5px 20px;
+  font-weight: 500;
+  border-radius: 30px; /* Adds rounded corners */
+  transition: background-color 0.3s ease; /* Smooth transition effect */
+}
+
+.nav-links li a:hover {
+   background-color: rgba(240, 240, 240, 0.2); /* Semi-transparent white */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Adds a shadow effect on hover */
+color: Black;
+}
+
+
+/* Hero Section */
+#hero {
+  position: relative;
+  height: 90vh;
+  background-image: url('bg.jpg'); /* Replace with your hero background image */
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.hero-content {
+  position: relative;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+.btn {
+  display: inline-block;
+  text-decoration: none;
+  color: #333;
+  background-color: #ffdd57;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #f5c940;
+  color: #111;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .nav-links {
+      display: none;
+      flex-direction: column;
+      background-color: #333;
+      position: absolute;
+      top: 60px;
+      right: 20px;
+      width: 200px;
+      padding: 10px;
+      border-radius: 5px;
+  }
+
+  .nav-links.active {
+      display: flex;
+  }
+
+  .hamburger {
+      display: flex;
+  }
+}
+
+
+/* Main Content Styling */
+
+/* About Section */
+#about {
+  padding: 50px 20px;
+  background: linear-gradient(to right, #e3f2fd, #e1f5fe);
+  color: #333;
+  text-align: center;
+}
+
+.about-header h2 {
+  font-size: 2.5rem;
+  color: #2c387e;
+  margin-bottom: 10px;
+}
+
+.about-header p {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 30px;
+}
+
+.about-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+.about-info {
+  position: relative;
+  text-align: center;
+}
+
+.vision-image {
+  width: 100%;
+  height: auto;
+  border-radius: 10px 10px 0 0; /* Makes the top corners of the image rounded */
+  margin-bottom: 15px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.about-info, .success-stories {
+  flex: 1 1 300px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-info:hover, .success-stories:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.success-stories h3 {
+  margin-bottom: 20px;
+}
+
+.carousel {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+}
+
+.carousel-item {
+  flex: 0 0 auto;
+  width: 200px;
+  text-align: center;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+}
+
+.carousel-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.carousel-item p {
+  font-size: 0.9rem;
+  color: #333;
+}
+
+.carousel::-webkit-scrollbar {
+  height: 8px;
+}
+
+.carousel::-webkit-scrollbar-thumb {
+  background: #2c387e;
+  border-radius: 10px;
+}
+
+.carousel::-webkit-scrollbar-track {
+  background: #e1f5fe;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .about-content {
+    flex-direction: column;
+    gap: 15px;
+  }
+}
+
+/* Courses Section */
+#courses {
+  padding: 50px 20px;
+  background: linear-gradient(to right, #ffecb3, #ffe0b2);
+  text-align: center;
+  color: #333;
+}
+
+.courses-header h2 {
+  font-size: 2.5rem;
+  color: #d84315;
+  margin-bottom: 10px;
+}
+
+.courses-header p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  color: #555;
+}
+
+.courses-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.course-card {
+  flex: 1 1 300px;
+  background: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.course-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.course-card img {
+  width: 100%;
+  height: 200px;
+  border-radius: 10px 10px 0 0;
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+
+.course-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #d84315;
+}
+
+.course-card p {
+  font-size: 1rem;
+  margin-bottom: 15px;
+  color: #555;
+}
+
+.course-card button {
+  padding: 10px 20px;
+  background-color: #d84315;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.course-card button:hover {
+  background-color: #bf360c;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .courses-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* Contact Section */
+#contact {
+  padding: 50px 20px;
+  background: linear-gradient(to right, #e1f5fe, #e0f7fa);
+  text-align: center;
+}
+
+.contact-header h2 {
+  font-size: 2.5rem;
+  color: #0d47a1;
+  margin-bottom: 10px;
+}
+
+.contact-header p {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 30px;
+}
+
+.contact-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.contact-card {
+  flex: 1 1 300px;
+  background: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.contact-card i {
+  font-size: 3rem;
+  color: #0d47a1;
+  margin-bottom: 10px;
+}
+
+.contact-card h3 {
+  font-size: 1.5rem;
+  color: #0d47a1;
+  margin-bottom: 10px;
+}
+
+.contact-card p {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 0;
+}
+
+.contact-card a {
+  text-decoration: none;
+  color: #0d47a1;
+}
+
+.contact-card a:hover {
+  text-decoration: underline;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .contact-content {
+    flex-direction: column;
+    gap: 15px;
+  }
+}
+
+
+
+
+/* Chatbot Button */
+#chatbot-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #4caf50;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+}
+
+#chatbot-button:hover {
+  background-color: #45a049;
+}
+
+/* Chat Modal */
+#chatbot-modal {
+  position: fixed;
+  bottom: 0;
+  right: 20px;
+  width: 90%;
+  max-width: 400px;
+  background-color: #f9f9f9;
+  border-radius: 10px 10px 0 0;
+  box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  z-index: 1000;
+}
+
+.hidden {
+  display: none;
+}
+
+#chatbot-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+/* Chatbot Button */
+#chatbot-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  align-items: center;
+  padding: 10px 15px;
+  background: linear-gradient(45deg, #00bcd4, #009688);
+  color: white;
+  border: none;
+  border-radius: 50px;
+  font-size: 16px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+}
+
+#chatbot-button:hover {
+  background: linear-gradient(45deg, #009688, #00bcd4);
+}
+
+.chatbot-icon {
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
+}
+
+/* Chatbot Modal */
+#chatbot-modal {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  width: 350px;
+  max-height: 500px;
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  z-index: 1000;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Chatbot Button */
+#chatbot-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  align-items: center;
+  padding: 10px 15px;
+  background: linear-gradient(45deg, #00bcd4, #009688);
+  color: white;
+  border: none;
+  border-radius: 50px;
+  font-size: 16px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+}
+
+#chatbot-button:hover {
+  background: linear-gradient(45deg, #009688, #00bcd4);
+}
+
+.chatbot-icon {
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
+}
+
+/* Chatbot Modal */
+#chatbot-modal {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  width: 350px;
+  max-height: 500px;
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  display: none; /* Hidden initially */
+  flex-direction: column;
+  z-index: 1000;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Chatbot Header */
+#chatbot-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  background: linear-gradient(45deg, #00bcd4, #009688);
+  color: white;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+#chatbot-header h2 {
+  margin: 0;
+  font-size: 18px;
+}
+
+#close-button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+/* Chatbox Body */
+#chat-box {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+}
+
+#chat-log {
+  flex: 1;
+  overflow-y: auto;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  background: #f9f9f9;
+  border-radius: 5px;
+  max-height: 300px;
+}
+
+.user-message, .bot-message {
+  padding: 8px 12px;
+  margin: 5px 0;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.user-message {
+  background: #e0f7fa;
+  align-self: flex-end;
+  color: #00796b;
+}
+
+.bot-message {
+  background: #fff8e1;
+  align-self: flex-start;
+  color: #f57f17;
+}
+
+/* Input Area */
+#input-container {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+#user-input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+button {
+  padding: 10px 15px;
+  border: none;
+  background: #009688;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+button:hover {
+  background: #00796b;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 600px) {
+  #chatbot-modal {
+    width: 90%;
+    bottom: 50px;
+    right: 5%;
+  }
+
+  #chatbot-button {
+    bottom: 15px;
+    right: 10px;
+    padding: 8px 12px;
+    font-size: 14px;
+  }
+}
