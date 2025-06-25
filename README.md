@@ -24,11 +24,7 @@ Clone the repository or download the project files to your local system.
 
 ### 4. Install Dependencies
 Install all the required packages using `pip`:
-```bash
-pip install -r requirements.txt
-```
-
-Alternatively, you can manually install the required packages:
+  you can manually install the required packages:
 ```bash
 pip install Flask flask_cors fuzzywuzzy
 ```
