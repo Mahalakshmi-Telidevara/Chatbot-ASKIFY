@@ -56,3 +56,5 @@ Once the server is running, you can interact with the chatbot through the HTML p
 └── styles.css            # CSS file for styling the chatbot page
 
 ```
+
+Video Demo Link: https://www.linkedin.com/posts/telidevara_miniproject-askify-chatbot-activity-7343517792345694209-5SE6?utm_source=share&utm_medium=member_desktop&rcm=ACoAAD6GP6UB7FIFXQO9jnEYv7sYnYPoLDj2vQI
