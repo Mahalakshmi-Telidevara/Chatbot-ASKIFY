@@ -1,11 +1,72 @@
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, send_file
 from flask_cors import CORS
 from fuzzywuzzy import process
 
-
-
 app = Flask(__name__)
 CORS(app, resources={r"/*": {"origins": "*"}})
+
+@app.route("/")
+def home():
+    return send_file("index.html")
+
+# Serve CSS
+@app.route("/styles.css")
+def css():
+    return send_file("styles.css", mimetype='text/css')
+
+# Serve JavaScript
+@app.route("/script.js")
+def js():
+    return send_file("script.js", mimetype='application/javascript')
+
+# Serve Images
+@app.route("/logo.png")
+def logo():
+    return send_file("logo.png", mimetype='image/png')
+
+@app.route("/chatbot.png")
+def chatbot_icon():
+    return send_file("chatbot.png", mimetype='image/png')
+
+@app.route("/bg.jpg")
+def bg():
+    return send_file("bg.jpg", mimetype='image/jpeg')
+
+@app.route("/bg1.jpg")
+def bg1():
+    return send_file("bg1.jpg", mimetype='image/jpeg')
+
+@app.route("/btech.jpg")
+def btech():
+    return send_file("btech.jpg", mimetype='image/jpeg')
+
+@app.route("/mtech.jpg")
+def mtech():
+    return send_file("mtech.jpg", mimetype='image/jpeg')
+
+@app.route("/mca.jpg")
+def mca():
+    return send_file("mca.jpg", mimetype='image/jpeg')
+
+@app.route("/student1.png")
+def student1():
+    return send_file("student1.png", mimetype='image/png')
+
+@app.route("/student2.png")
+def student2():
+    return send_file("student2.png", mimetype='image/png')
+
+@app.route("/student3.png")
+def student3():
+    return send_file("student3.png", mimetype='image/png')
+
+@app.route("/student4.png")
+def student4():
+    return send_file("student4.png", mimetype='image/png')
+
+@app.route("/student5.png")
+def student5():
+    return send_file("student5.png", mimetype='image/png')
 
 # Predefined educational responses
 responses = {
@@ -55,7 +116,6 @@ def chat():
 
     # Return the response
     return jsonify({"response": response})
-
 
 if __name__ == "__main__":
     # Run the app on a specific port if needed
